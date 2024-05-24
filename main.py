@@ -1,5 +1,5 @@
 import asyncio
-import logging
+import logging,os
 from datetime import date, datetime
 from keyboards import key_board
 from aiogram import Dispatcher, Bot, Router, F
@@ -8,7 +8,8 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from db import Student, Messages
 from aiogram.filters import CommandStart, Command
-bot = Bot("6709079765:AAEf3YVhvxCaBSe5xvNhzwVtzI68gY6e1OQ")
+Bot_Token = os.getenv("Token")
+bot = Bot(Bot_Token)
 dp = Dispatcher()
 router = Router()
 class Info(StatesGroup):
