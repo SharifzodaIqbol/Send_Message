@@ -2,7 +2,7 @@ from peewee import *
 
 db = SqliteDatabase('people.db')
 
-class User(Model):
+class Employee(Model):
     id_telegram = CharField()
 
     class Meta:
@@ -21,5 +21,5 @@ class Messages(Model):
     class Meta:
         database = db
 db.connect()
-db.create_tables([User, Student, Messages])
+db.create_tables([Employee, Student, Messages])
 
